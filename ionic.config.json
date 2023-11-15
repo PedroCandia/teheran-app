@@ -1,0 +1,7 @@
+{
+  "name": "teheran-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
