@@ -7,8 +7,9 @@
 
       <div id="desktop-icons">
         @for (icon of icons; track icon) {
-          <div class="icon-container">
+          <div class="icon-container icon">
             <ion-img src="{{icon.src}}"></ion-img>
+            <span class="dt_txt" style="display: none;">{{icon.txt}}</span>
           </div>
         }
         <div class="icon-container top">
