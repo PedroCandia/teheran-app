@@ -4,6 +4,18 @@
       <div id="desktop-menu">
         <ion-icon name="menu-outline"></ion-icon>
       </div>
+
+      <div id="desktop-icons">
+        @for (icon of icons; track icon) {
+          <div class="icon-container">
+            <ion-img src="{{icon.src}}"></ion-img>
+          </div>
+        }
+        <div class="icon-container top">
+          <span class="top_arrow"></span>
+          <ion-text>TOP</ion-text>
+        </div>
+      </div>
     </div>
   </header>
 
