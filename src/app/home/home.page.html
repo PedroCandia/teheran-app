@@ -7,10 +7,10 @@
 
       <div id="desktop-icons">
         @for (icon of icons; track icon) {
-          <div class="icon-container icon">
+          <a class="icon-container icon" target="{{icon.target}}" href="{{icon.href}}">
             <ion-img src="{{icon.src}}"></ion-img>
             <span class="dt_txt" style="display: none;">{{icon.txt}}</span>
-          </div>
+          </a>
         }
         <div class="icon-container top">
           <span class="top_arrow"></span>
@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <div id="container">
+  <div id="full-page">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
