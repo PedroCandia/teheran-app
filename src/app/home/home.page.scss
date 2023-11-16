@@ -1,5 +1,11 @@
 ion-content {
   vertical-align: baseline;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1;
 }
 
 header {
@@ -104,6 +110,172 @@ header {
 }
 
 #full-page {
-  background-color: rgb(111 111 111);
   height: 100%;
+  position: relative;
+  touch-action: none;
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 1000ms ease 0s;
+  margin-right: 66px;
+}
+
+.video1 {
+  opacity: 0.3;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  object-fit: cover;
+  z-index: 5;
+}
+
+#fp-tableCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main_ment {
+  text-align: center;
+  position: relative;
+  z-index: 7;
+  font-size: 2.313rem;
+  font-weight: 300;
+  color: #fff;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+.thr_logo {
+  position: fixed;
+  left: 50px;
+  top: 35px;
+  z-index: 9;
+}
+
+#fp-nav {
+  margin-top: -343px;
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+#fp-nav.right {
+  right: auto;
+  left: 60px;
+  bottom: 0;
+  top: auto;
+  height: 686px;
+
+  ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      height: 14.28%;
+      display: flex;
+
+      a {
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        height: 100%;
+        cursor: pointer;
+        text-decoration: none;
+
+        span {
+          display: block;
+          border-radius: 0;
+          height: 98px;
+          width: 1px;
+          border: 0;
+          background: rgb(255 255 255 / 50%);
+          left: auto;
+          top: 0;
+          right: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.fp-tooltip {
+  padding: 0.5rem 1rem;
+  font-family: lorean;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  .fp-letter {
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.active {
+  span {
+    display: block;
+    width: 3px !important;
+    background: #fff !important;
+  }
+}
+
+.active-li {
+  margin-bottom: 0.5rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  z-index: 8;
+}
+
+.arrow .arrow_span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: -7.5px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg) !important;
+  animation: sdb 2s infinite;
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+@keyframes sdb {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.arrow .arrow_txt {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -27px;
+    font-family: lorean;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }

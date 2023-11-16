@@ -36,5 +36,42 @@ export class HomePage {
     }
   ]
 
+  fpNav = [
+    {
+      href: '#firstPage',
+      letter: 'M',
+      msg: '메인',
+      class: 'active'
+    },
+    {
+      href: '#3rdPage',
+      letter: 'P',
+      msg: '전문가'
+    },
+    {
+      href: '#4thpage',
+      letter: 'B',
+      msg: '지사'
+    },
+    {
+      href: '#5thpage',
+      letter: 'F',
+      msg: '분야'
+    },
+    {
+      href: '#6thpage',
+      letter: 'S',
+      msg: '스토리'
+    },
+    {
+      href: '#7thpage',
+      letter: 'Q',
+      msg: '빠른 상담'
+    },
+    {
+      href: '#lastPage',
+    },
+  ]
+
   constructor() {}
 }
