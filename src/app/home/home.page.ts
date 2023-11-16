@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
   icons = [
     {
@@ -38,40 +39,71 @@ export class HomePage {
 
   fpNav = [
     {
-      href: '#firstPage',
+      href: 'section0',
       letter: 'M',
       msg: '메인',
-      class: 'active'
+      class: 'active',
+      index: 0
     },
     {
-      href: '#3rdPage',
+      href: 'section1',
       letter: 'P',
-      msg: '전문가'
+      msg: '전문가',
+      index: 1
     },
     {
       href: '#4thpage',
       letter: 'B',
-      msg: '지사'
+      msg: '지사',
+      index: 2
     },
     {
       href: '#5thpage',
       letter: 'F',
-      msg: '분야'
+      msg: '분야',
+      index: 3
     },
     {
       href: '#6thpage',
       letter: 'S',
-      msg: '스토리'
+      msg: '스토리',
+      index: 4
     },
     {
       href: '#7thpage',
       letter: 'Q',
-      msg: '빠른 상담'
+      msg: '빠른 상담',
+      index: 5
     },
     {
       href: '#lastPage',
+      index: 6
     },
   ]
 
   constructor() {}
+
+  scrollToSection(index: number) {
+    this.updateActiveClass(index);
+
+     const sectionId = this.fpNav[index].href;
+     this.scrollIntoView(sectionId);
+  }
+
+  updateActiveClass(index: number) {
+    this.fpNav.forEach((navItem, i) => {
+      if (i === index) {
+        navItem.class = 'active';
+      } else {
+        navItem.class = '';
+      }
+    });
+  }
+
+  scrollIntoView(sectionId: string) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
