@@ -1,9 +1,22 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({ opacity: 0.3 })),
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('2200ms ease-in', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('1000ms ease-out', style({ opacity: 0.5 })),
+      ]),
+    ]),
+  ]
 })
 
 export class HomePage implements OnInit {
@@ -83,17 +96,8 @@ export class HomePage implements OnInit {
     },
   ]
 
+  currentIndex: number = 0;
   professionals = [
-    {
-      src: 'main3_8.png',
-      show: false,
-      msg1: '검증된 실력, 차별화된 전문성',
-      msg2: '테헤란',
-      msg3: '변리사 김신연',
-      bold2: '분야별 전문가',
-      mark: 'mark1.png',
-      animationClass: 'fade-out',
-    },
     {
       src: 'main3_1.png',
       show: true,
@@ -104,8 +108,82 @@ export class HomePage implements OnInit {
       bold3: '이수학',
       mark: 'mark2.png',
       mark2: 'mark1.png',
-      animationClass: 'fade-in',
-    }
+    },
+    {
+      src: 'main3_2.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '대표 변호사/변리사',
+      bold2: '분야별 전문가',
+      bold3: '백상희',
+      mark: '',
+      mark2: 'mark1.png',
+    },
+    {
+      src: 'main3_3.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변호사',
+      bold2: '분야별 전문가',
+      bold3: '이동간',
+      mark: 'mark2.png',
+      mark2: '',
+    },
+    {
+      src: 'main3_4.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변호사',
+      bold2: '분야별 전문가',
+      bold3: '길인영',
+      mark: '',
+      mark2: 'mark2.png',
+    },
+    {
+      src: 'main3_5.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '대표 세무사',
+      bold2: '분야별 전문가',
+      bold3: '서혁진',
+      mark: '',
+      mark2: 'mark3.png',
+    },
+    {
+      src: 'main3_6.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변호사',
+      bold2: '분야별 전문가',
+      bold3: '오대호',
+      mark: '',
+      mark2: 'mark2.png',
+    },
+    {
+      src: 'main3_7.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변호사',
+      bold2: '분야별 전문가',
+      bold3: '윤웅채',
+      mark: '',
+      mark2: 'mark1.png',
+    },
+    {
+      src: 'main3_8.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변리사 김신연',
+      bold2: '분야별 전문가',
+      mark: 'mark1.png',
+    },
   ]
 
   @HostListener('wheel', ['$event'])
@@ -172,6 +250,7 @@ export class HomePage implements OnInit {
     const lastElementFpNav = nextIndex < this.fpNav.length;
     if (lastElementFpNav) {
       this.scrollToSection(nextIndex);
+      this.currentIndex = nextIndex;
     }
   }
 
@@ -182,6 +261,7 @@ export class HomePage implements OnInit {
     const firstElementFpNav = prevIndex >= 0;
     if (firstElementFpNav) {
       this.scrollToSection(prevIndex);
+      this.currentIndex = prevIndex;
     }
   }
 }
