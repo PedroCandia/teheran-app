@@ -323,16 +323,20 @@ header {
   }
 }
 
-#section1 {
+#section0, #section1, #section2, #section3, #section4, #section5, #section6 {
   position: relative;
-  text-align: center;
-  height: 100vh;
-  background-color: rgb(109, 89, 71);
   overflow: hidden;
   margin: 0 auto;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 66px;
+}
+
+#section1 {
+  text-align: center;
+  height: 100vh;
+  background-color: rgb(109, 89, 71);
 }
 
 .sec2_more {
@@ -443,4 +447,59 @@ header {
   font-size: 30px;
   font-weight: 200;
   color: #fff;
+}
+
+#section2 {
+  text-align: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  background-image: url(../../assets/img/sec3_bg.jpg);
+  background-position: 50% 50%;
+}
+
+#section3 {
+  height: 100vh;
+  background-color: rgb(204, 221, 255);
+  background-image: url(../../assets/img/sec4_bg.jpg);
+}
+
+#section4 {
+  text-align: center;
+  height: 100vh;
+  background-color: rgb(72, 63, 54);
+  background-image: url(../../assets/img/sec5_bg.jpg);
+}
+
+#section5 {
+  text-align: center;
+  height: 100vh;
+  background-color: rgb(41, 37, 33);
+}
+
+#section6 {
+  height: auto;
+  background-color: #1b1917;
+  color: #fff;
+
+  .footer_pc {
+    background-color: #3c3229;
+    background-image: url(../../assets/img/ft_slogan2.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 160px;
+  }
+}
+
+.renew_footer {
+  margin: 0 auto;
+  width: 1345px;
+}
+
+.ft_up {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.footer_pc2 {
+  display: none;
 }

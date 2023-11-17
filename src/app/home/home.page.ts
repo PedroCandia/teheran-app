@@ -68,31 +68,31 @@ export class HomePage implements OnInit {
       index: 1
     },
     {
-      href: '#4thpage',
+      href: 'section2',
       letter: 'B',
       msg: '지사',
       index: 2
     },
     {
-      href: '#5thpage',
+      href: 'section3',
       letter: 'F',
       msg: '분야',
       index: 3
     },
     {
-      href: '#6thpage',
+      href: 'section4',
       letter: 'S',
       msg: '스토리',
       index: 4
     },
     {
-      href: '#7thpage',
+      href: 'section5',
       letter: 'Q',
       msg: '빠른 상담',
       index: 5
     },
     {
-      href: '#lastPage',
+      href: 'section6',
       index: 6
     },
   ]
