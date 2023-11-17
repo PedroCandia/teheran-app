@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -203,7 +204,7 @@ export class HomePage implements OnInit {
   }
 
 
-  constructor() {}
+  constructor(private menuCtrl: MenuController) {}
 
   ngOnInit() {
     const FIVE_SEC_IN_MS = 5000;
@@ -263,5 +264,9 @@ export class HomePage implements OnInit {
       this.scrollToSection(prevIndex);
       this.currentIndex = prevIndex;
     }
+  }
+
+  openEndMenu() {
+    this.menuCtrl.open('first-menu');
   }
 }

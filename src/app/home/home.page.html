@@ -1,13 +1,22 @@
+<ion-menu menuId="first-menu" contentId="main-content" side="end">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+
 <div id="content">
-  <header>
+  <header id="main-content">
     <div id="toolbar">
-      <div id="desktop-menu">
-        <label class="dt_menu">
-          <span></span>
-          <span style="width: 18px; margin-left: 6px;"></span>
-          <span></span>
-        </label>
-      </div>
+        <div id="desktop-menu">
+          <label class="dt_menu" (click)="openEndMenu()">
+            <span></span>
+            <span style="width: 18px; margin-left: 6px;"></span>
+            <span></span>
+          </label>
+        </div>
 
       <div id="desktop-icons">
         @for (icon of icons; track icon) {
