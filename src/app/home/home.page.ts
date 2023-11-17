@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class HomePage {
+  canScroll = true;
+
   icons = [
     {
       src: "../../assets/icon/logo_icon.png",
@@ -81,13 +83,30 @@ export class HomePage {
     },
   ]
 
+  @HostListener('wheel', ['$event'])
+  onWheel(event: WheelEvent) {
+    if (this.canScroll) {
+      if (event.deltaY > 0) {
+        this.scrollDown();
+      } else if (event.deltaY < 0) {
+        this.scrollUp();
+      }
+  
+      this.canScroll = false;
+      setTimeout(() => {
+        this.canScroll = true;
+      }, 1000);
+    }
+  }
+
+
   constructor() {}
 
   scrollToSection(index: number) {
     this.updateActiveClass(index);
 
      const sectionId = this.fpNav[index].href;
-     this.scrollIntoView(sectionId);
+     this.scrollIntoSection(sectionId);
   }
 
   updateActiveClass(index: number) {
@@ -100,10 +119,30 @@ export class HomePage {
     });
   }
 
-  scrollIntoView(sectionId: string) {
+  scrollIntoSection(sectionId: string) {
     const targetElement = document.getElementById(sectionId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollDown() {
+    const currentIndex = this.fpNav.findIndex((navItem) => navItem.class === 'active');
+    const nextIndex = currentIndex + 1;
+  
+    const lastElementFpNav = nextIndex < this.fpNav.length;
+    if (lastElementFpNav) {
+      this.scrollToSection(nextIndex);
+    }
+  }
+
+  scrollUp() {
+    const currentIndex = this.fpNav.findIndex((navItem) => navItem.class === 'active');
+    const prevIndex = currentIndex - 1;
+
+    const firstElementFpNav = prevIndex >= 0;
+    if (firstElementFpNav) {
+      this.scrollToSection(prevIndex);
     }
   }
 }

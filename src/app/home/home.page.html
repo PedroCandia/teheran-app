@@ -1,4 +1,4 @@
-<ion-content>
+<div id="content">
   <header>
     <div id="toolbar">
       <div id="desktop-menu">
@@ -16,7 +16,7 @@
             <span class="dt_txt" style="display: none;">{{icon.txt}}</span>
           </a>
         }
-        <div class="icon-container top">
+        <div class="icon-container top" (click)="scrollToSection(0)">
           <span class="top_arrow"></span>
           <ion-text>TOP</ion-text>
         </div>
@@ -81,4 +81,4 @@
       }
     </ul>
   </div>
-</ion-content>
+</div>
