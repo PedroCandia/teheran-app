@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +6,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
   canScroll = true;
 
   icons = [
@@ -83,6 +83,31 @@ export class HomePage {
     },
   ]
 
+  professionals = [
+    {
+      src: 'main3_8.png',
+      show: false,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '변리사 김신연',
+      bold2: '분야별 전문가',
+      mark: 'mark1.png',
+      animationClass: 'fade-out',
+    },
+    {
+      src: 'main3_1.png',
+      show: true,
+      msg1: '검증된 실력, 차별화된 전문성',
+      msg2: '테헤란',
+      msg3: '대표 변호사/변리사',
+      bold2: '분야별 전문가',
+      bold3: '이수학',
+      mark: 'mark2.png',
+      mark2: 'mark1.png',
+      animationClass: 'fade-in',
+    }
+  ]
+
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
     if (this.canScroll) {
@@ -101,6 +126,20 @@ export class HomePage {
 
 
   constructor() {}
+
+  ngOnInit() {
+    const FIVE_SEC_IN_MS = 5000;
+    setInterval(() => {
+      this.changeShowAttributeToProfessionals();
+    }, FIVE_SEC_IN_MS);
+  }
+
+  changeShowAttributeToProfessionals() {
+    const currentIndex = this.professionals.findIndex((prof) => prof.show);
+    this.professionals[currentIndex].show = false;
+    const nextIndex = (currentIndex + 1) % this.professionals.length;
+    this.professionals[nextIndex].show = true;
+  }
 
   scrollToSection(index: number) {
     this.updateActiveClass(index);

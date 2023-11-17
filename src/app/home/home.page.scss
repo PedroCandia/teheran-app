@@ -337,4 +337,115 @@ header {
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-right: 66px;
+}
+
+.sec2_more {
+  position: absolute;
+  bottom: 125px;
+  right: 188px;
+  z-index: 8;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sec2_more_arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  transform: rotate(225deg);
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.lorean {
+  display: block;
+  font-size: 1.813rem;
+  transition: 0.4s;
+  font-family: 'lorean', 'sans-serif';
+  padding-top: 10px;
+}
+
+.lorean.more:hover {
+  padding-top: 13px;
+  margin-top: -6px;
+  font-size: 2rem;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.professional {
+  position: absolute;
+  display: block;
+  left: -36px;
+  top: 25%;
+  color: #66533f;
+  font-family: lorean;
+  font-size: 20.9vw;
+  z-index: 2;
+  text-align: left;
+  letter-spacing: -4px;
+}
+
+.professional2 {
+  font-style: italic;
+  color: #66533f;
+  font-family: lorean;
+  font-size: 20.9;
+  letter-spacing: -4px;
+}
+
+.swiper-container {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+}
+
+.pro_bg {
+  position: relative;
+  top: 50px;
+  margin-left: 24%;
+}
+
+.profile {
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  z-index: 7;
+  text-align: left;
+  margin-left: -66px;
+}
+
+.main_ment2 {
+  font-size: 34px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.mark_img {
+  float: left;
+  margin-top: -2px;
+  margin-right: 10px;
+}
+
+.mark_img2 {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.pro_up_span {
+  font-size: 30px;
+  font-weight: 200;
+  color: #fff;
 }

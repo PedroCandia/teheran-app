@@ -57,7 +57,148 @@
 
     <div id="section1">
       <div class="fp-tableCell">
-        <a href="/expert" class="sec2_more"><span class="sec2_more_arrow"></span><span class="lorean more">MORE</span></a>
+        <a href="https://www.thr-law.co.kr/expert" class="sec2_more">
+          <span class="sec2_more_arrow"></span>
+          <span class="lorean more">MORE</span>
+        </a>
+
+        <span class="professional">Pr<span class="professional2">ofession</span>al.</span>
+
+        <div class="swiper-container">
+          @for (professional of professionals; track professional) {
+            @if(professional.show) {
+              <div class="swiper-wrapper">
+                <img src="../../assets/img/{{professional.src}}" alt="{{professional.src}}" class="pro_bg">
+                <div class="profile">
+                  <div class="main_ment2">
+                    {{professional.msg1}}<div style="padding: 0.5rem 0rem;"></div>{{professional.msg2}} <span style="font-weight: 600;">{{professional.bold2}}</span>
+                  </div>
+                  <div class="pro_up">
+                    <img class="mark_img {{professional.mark}}" src="../../assets/img/{{professional.mark}}" alt="{{professional.mark}}">
+                    <img class="mark_img {{professional.mark2}}" src="../../assets/img/{{professional.mark2}}" alt="{{professional.mark2}}">
+                    <span class="pro_up_span">{{professional.msg3}} <span style="font-weight: 600;">{{professional.bold3}}</span></span>
+                  </div>
+                </div>
+              </div>
+            }
+          }
+        </div>
+
+        <!-- 
+            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-3626px, 0px, 0px);">
+            <img src="../../assets/img/main3_2.png" alt="main3_2.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img1" src="../views/img/mark1.png" alt="mark1.png"><span class="pro_up_span">대표 변리사 <span class="pro_up_span2">백상희</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">특허</div>
+                <div class="pro_box">지식재산권분쟁</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-5439px, 0px, 0px);">
+            <img src="../../assets/img/main3_3.png" alt="main3_3.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img2" src="../views/img/mark2.png" alt="mark2.png"><span class="pro_up_span">변호사 <span class="pro_up_span2">이동간</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">형사</div>
+                <div class="pro_box">가사</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="3" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-7252px, 0px, 0px);">
+            <img src="../../assets/img/main3_4.png" alt="main3_4.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img2" src="../views/img/mark2.png" alt="mark2.png"><span class="pro_up_span">변호사 <span class="pro_up_span2">길인영</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">가사</div>
+                <div class="pro_box">형사</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="4" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-9065px, 0px, 0px);">
+            <img src="../../assets/img/main3_5.png" alt="main3_5.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img3" src="../views/img/mark3.png" alt="mark3.png"><span class="pro_up_span">대표 세무사 <span class="pro_up_span2">서혁진</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">세무</div>
+                <div class="pro_box">법인등기</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="5" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-10878px, 0px, 0px);">
+            <img src="../../assets/img/main3_6.png" alt="main3_6.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img2" src="../views/img/mark2.png" alt="mark2.png"><span class="pro_up_span">변호사 <span class="pro_up_span2">오대호</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">민사</div>
+                <div class="pro_box">부동산</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="6" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-12691px, 0px, 0px);">
+            <img src="../../assets/img/main3_7.png" alt="main3_7.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img1" src="../views/img/mark1.png" alt="mark1.png"><span class="pro_up_span">변리사 <span class="pro_up_span2">윤웅채</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">특허</div>
+                <div class="pro_box">지식재산권분쟁</div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="7" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-14504px, 0px, 0px);">
+            <img src="../../assets/img/main3_8.png" alt="main3_8.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img1" src="../views/img/mark1.png" alt="mark1.png"><span class="pro_up_span">변리사 <span class="pro_up_span2">김신연</span></span>
+              </div>
+              <div class="pro_down">
+                <div class="pro_box">특허</div>
+                <div class="pro_box">지식재산권분쟁</div>
+              </div>
+            </div>
+            </div>		 
+          <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1813px; transition-duration: 2000ms; opacity: 1; transform: translate3d(-16317px, 0px, 0px);">
+            <img src="../../assets/img/main3_1.png" alt="main3_1.png" class="pro_bg">	
+            <div class="profile">
+              <div class="main_ment2">검증된 실력, 차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="main_ment3">검증된 실력,<br>차별화된 전문성<br>테헤란 <span style="font-weight: 600;">분야별 전문가</span></div>
+              <div class="pro_up">
+                <img class="mark_img mark_img2" src="../views/img/mark2.png" alt="mark2.png" style="margin-right: 5px;"><img class="mark_img mark_img1" src="../views/img/mark1.png" alt="mark1.png"><span class="pro_up_span">대표 변호사/변리사 <span class="pro_up_span2">이수학</span></span>
+              </div>
+              <div class="pro_down pro_down1">
+                <div class="pro_box">회생</div>
+                <div class="pro_box">형사</div>
+                <div class="pro_box">특허</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>
