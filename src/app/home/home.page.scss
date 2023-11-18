@@ -732,4 +732,51 @@ ion-select, ion-input {
     justify-content: space-around;
     align-items: center;
   }
+
+  .sec2_more {
+    bottom: 39px;
+    right: 52px;
+  }
+
+  .professional {
+    left: -316px;
+    font-size: 43.8vw;
+    top: 332px;
+    transform: rotate(90deg);
+  }
+
+  .fp-tableCell {
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  .pro_bg {
+    position: relative;
+    top: 96px;
+    margin-left: 18%;
+    min-width: 32rem;
+    height: 100%;
+  }
+
+  .thr_logo {
+    left: 21px;
+    top: 25px;
+
+    a {
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .main_ment2 {
+    font-size: 23px;
+  }
+
+  .pro_up_span {
+    font-size: 23px;
+  }
 }
