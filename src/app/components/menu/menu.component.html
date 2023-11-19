@@ -1,0 +1,103 @@
+<div class="dt_gnb">
+  <div class="dt_gnb_inner">
+    <p class="dt_gnb_tit">
+      <a href="">
+        <span class="tit_kor">기업정보</span>
+        <span class="tit_eng lorean">ABOUT US</span>
+      </a>
+    </p>
+
+    <p class="dt_gnb_list">
+      @for (item of menu_list[0]; track $index) {
+        <a href="{{item.href}}">{{item.msg}}</a>
+      }
+    </p>
+
+    <p class="dt_gnb_tit dt_gnb_tit2">
+      <a href="https://www.thr-law.co.kr/board/case">
+        <span class="tit_kor">커뮤니티</span>
+        <span class="tit_eng lorean">COMMUNITY</span>
+      </a>
+    </p>
+
+    <p class="dt_gnb_list">
+      @for (item of menu_list[1]; track $index) {
+        <a href="{{item.href}}">{{item.msg}}</a>
+      }
+    </p>
+  </div>
+
+  <div class="dt_gnb_line"></div>
+
+  <div class="dt_gnb_tel">
+    <img src="../../assets/icon/main_icon5.png" alt="main_icon5.png">
+    <span class="tit_kor tit_kor2">전화 상담</span>
+    <span class="junbun">1668-4636</span>
+    <div class="bottom_contact">
+      <div class="cansulting_area">
+        <ion-select label="[필수]상담분야 선택" placeholder="" justify="space-between">
+          @for (item of select; track $index) {
+            <ion-select-option value="{{item}}">{{item}}</ion-select-option>
+          }
+        </ion-select>
+
+        <ion-input label="연락처"></ion-input>
+
+        <div class="agree_input">
+          <ion-checkbox>개인정보 수집에 동의 합니다.</ion-checkbox>
+        </div>
+
+        <ion-button class="bottom_form_check btn-gold">
+          <span class="t_show pc_show" id="footer_form_button">상담신청</span>
+          <span class="m_show">신청</span>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dt_gnb_line"></div>
+
+  <div class="dt_gnb_board">
+    <a id="dt_gnb_visit_mobile_icon6" href="https://www.thr-law.co.kr/board/counselling">
+      <img src="../../assets/icon/main_icon6.png" alt="main_icon6.png">
+      <span class="tit_kor">게시판 상담</span>
+    </a>
+
+    <a id="dt_gnb_visit_mobile" href="https://www.thr-law.co.kr/counselling/visit">
+      <img src="../../assets/icon/main_icon7.png" alt="main_icon7.png">
+      <span class="tit_kor">방문 상담</span>
+    </a>
+  </div>
+
+  <div class="dt_gnb_line"></div>
+
+  <div class="dt_gnb_visit">
+    <a href="https://www.thr-law.co.kr/counselling/visit">
+      <img src="../../assets/icon/main_icon7.png" alt="main_icon7.png">
+      <span class="tit_kor">방문 상담</span>
+    </a>
+  </div>
+
+  <div class="mo_icon_wrap">
+    <a href="https://blog.naver.com/ktk0bx48" class="mo_icon_a" target="_blank">
+      <img src="../../assets/icon/mo_icon1.png" alt="mo_icon1.png" class="mo_icon">
+      <!-- <span class="dt_txt">공식 블로그</span>	 -->
+    </a>
+    <a class="click_to_call" href="tel:1668-4636">
+      <img src="../../assets/icon/mo_icon2.png" alt="mo_icon2.png" class="mo_icon">
+      <!-- <span class="dt_txt">1668-4636</span> -->	
+    </a>
+    <a href="https://teheran.channel.io/" class="mo_icon_a" target="_blank">
+      <img src="../../assets/icon/mo_icon3.png" alt="mo_icon3.png" class="mo_icon">
+      <!-- <span class="dt_txt">채팅 상담</span> -->	
+    </a>
+    <a href="https://www.thr-law.co.kr/roadmap" class="mo_icon_a">
+      <img src="../../assets/icon/mo_icon4.png" alt="mo_icon4.png" class="mo_icon">
+      <!-- <span class="dt_txt">오시는 길</span> -->	
+    </a>
+    <a href="https://www.thr-law.co.kr/images/bottom/teheran_brochure.pdf" class="mo_icon_a">
+      <img src="../../assets/icon/mo_icon_bro.png" alt="mo_icon_bro.png" class="mo_icon">
+      <!-- <span class="dt_txt">오시는 길</span> -->
+    </a>
+  </div>
+</div>
