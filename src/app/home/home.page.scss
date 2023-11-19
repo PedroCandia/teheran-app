@@ -127,42 +127,12 @@ header {
   padding-right: 66px;
 }
 
-.video1 {
-  opacity: 0.3;
-  background-size: cover;
-  background-position: 50% 50%;
-  position: absolute;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  right: -100%;
-  bottom: -100%;
-  top: -100%;
-  left: -100%;
-  object-fit: cover;
-  z-index: 5;
-}
-
 #fp-tableCell {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.main_ment {
-  text-align: center;
-  position: relative;
-  z-index: 7;
-  font-size: 2.15rem;
-  font-weight: 300;
-  color: #fff;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .thr_logo {
@@ -254,30 +224,6 @@ header {
   font-weight: 600;
 }
 
-.arrow {
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
-  text-align: center;
-  z-index: 8;
-}
-
-.arrow .arrow_span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -7.5px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transform: rotate(-45deg) !important;
-  animation: sdb 2s infinite;
-  box-sizing: border-box;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  cursor: pointer;
-}
-
 @keyframes sdb {
   0% {
       opacity: 0;
@@ -287,19 +233,6 @@ header {
       opacity: 1;
       top: 20px;
   }
-}
-
-.arrow .arrow_txt {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  margin-left: -27px;
-  font-family: lorean;
-  color: #fff;
-  font-size: 0.8rem;
-  letter-spacing: 1.5px;
-  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-  cursor: pointer;
 }
 
 .dt_menu {
@@ -594,9 +527,8 @@ ion-menu {
   font-size: 18px;
 }
 
-/* Estilo para ion-select enfocado */
 ion-select, ion-input {
-  border-bottom: 2px solid #b9b9b9; /* Cambia el color del borde según tus preferencias */
+  border-bottom: 2px solid #b9b9b9;
 }
 
 .agree_input {
@@ -769,10 +701,6 @@ ion-select, ion-input {
         max-width: 80%;
       }
     }
-  }
-
-  .main_ment {
-    font-size: 23px;
   }
 
   .main_ment2 {
