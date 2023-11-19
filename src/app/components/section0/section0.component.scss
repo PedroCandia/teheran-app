@@ -64,6 +64,17 @@
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     cursor: pointer;
 }
+
+@keyframes sdb {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 20px;
+    }
+  }
   
 @media (max-width: 768px) { 
     .main_ment {

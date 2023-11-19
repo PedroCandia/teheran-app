@@ -224,17 +224,6 @@ header {
   font-weight: 600;
 }
 
-@keyframes sdb {
-  0% {
-      opacity: 0;
-      top: 0;
-  }
-  100% {
-      opacity: 1;
-      top: 20px;
-  }
-}
-
 .dt_menu {
   position: fixed;
   right: 21px;
