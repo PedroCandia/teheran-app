@@ -19,6 +19,5 @@ export class Section0Component {
   
   videoError() {
     console.error('Error al cargar el video.');
-  }  
-
+  }
 }

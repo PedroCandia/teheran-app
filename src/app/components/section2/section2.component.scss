@@ -1,0 +1,112 @@
+.section3_pc1 {
+    margin: 30px auto 0;
+    width: 1235px;
+    font-size: 24px;
+}
+
+.sec3_txt {
+    display: block;
+    // margin: 0 auto;
+    font-weight: 200;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+}
+
+.sec3_br {
+    display: none;
+}
+
+.section3_pc .sec3_tit2 {
+    font-size: 24px;
+}
+
+.box_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_1_1, .box_2_2, .box_3_3 {
+    margin-right: 22px;
+    width: 320px;
+}
+
+.box_three {
+    float: left;
+    position: relative;
+}
+
+.imgwrap {
+    overflow: hidden;
+    position: relative;
+    width: 320px;
+}
+
+.box_img2 {
+    position: relative;
+    display: block;
+    z-index: 2;
+    width: 100%;
+}
+
+.imgwrap .slide_box {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.box_txt {
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 19px;
+    font-weight: 200;
+    z-index: 2;
+}
+
+.box_txt1 {
+    font-weight: 600;
+}
+
+.box_txt1, .box_txt2 {
+    float: left;
+}
+
+.box_txt2 {
+    margin-left: 12px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.box_line {
+    position: absolute;
+    top: -1500px;
+    left: 50%;
+    background-color: rgb(255 255 255 / 13%);
+    height: 5000px;
+    width: 1px;
+    z-index: 1;
+}
+
+.section3_pc3 {
+    width: 685px;
+    margin: 35px auto 0;
+}
+
+.section3_pc3 .box_1_1 {
+    margin-right: 43px;
+}
+
+.br {
+    margin-top: 0.2rem;
+}
