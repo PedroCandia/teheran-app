@@ -7,8 +7,8 @@
   </span>
 </div>
 
-<video autoplay muted playsinline loop data-keepplaying data-object-fit="cover" data-wf-ignore="true" style="width:100%;opacity: 0.3;" class="video1">
-  <source src="../../assets/video/main_mov.mp4" type="video/mp4" data-wf-ignore="true">
+<video loop preload="auto" style="width:100%;opacity: 0.3;" class="video1" (loadeddata)="videoLoaded()" (error)="videoError()">
+  <source src="../../assets/video/main_mov.mp4" type="video/mp4">
 </video>
 
 <div class="arrow">
