@@ -9,7 +9,7 @@ import { MenuComponent } from '../components/menu/menu.component';
 import { Section0Component } from '../components/section0/section0.component';
 import { Section1Component } from '../components/section1/section1.component';
 import { Section2Component } from '../components/section2/section2.component';
-
+import { Section3Component } from '../components/section3/section3.component';
 
 @NgModule({
   imports: [
@@ -18,6 +18,6 @@ import { Section2Component } from '../components/section2/section2.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, MenuComponent, Section0Component, Section1Component, Section2Component]
+  declarations: [HomePage, MenuComponent, Section0Component, Section1Component, Section2Component, Section3Component]
 })
 export class HomePageModule {}
