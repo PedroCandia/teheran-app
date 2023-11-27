@@ -1,0 +1,26 @@
+<a href="https://www.thr-law.co.kr/expert" class="sec2_more">
+  <span class="sec2_more_arrow"></span>
+  <span class="lorean more">MORE</span>
+</a>
+
+<span class="professional">Pr<span class="professional2">ofession</span>al.</span>
+
+<div class="swiper-container">
+  @for (professional of professionals; track professional) {
+    @if(professional.show) {
+      <div class="swiper-wrapper" [@fadeInOut]="$index === currentIndex">
+        <img src="../../assets/img/{{professional.src}}" alt="{{professional.src}}" class="pro_bg">
+        <div class="profile">
+          <div class="main_ment2">
+            {{professional.msg1}}<div style="padding: 0.5rem 0rem;"></div>{{professional.msg2}} <span style="font-weight: 600;">{{professional.bold2}}</span>
+          </div>
+          <div class="pro_up">
+            <img class="mark_img {{professional.mark}}" src="../../assets/img/{{professional.mark}}" alt="{{professional.mark}}">
+            <img class="mark_img {{professional.mark2}}" src="../../assets/img/{{professional.mark2}}" alt="{{professional.mark2}}">
+            <span class="pro_up_span">{{professional.msg3}} <span style="font-weight: 600;">{{professional.bold3}}</span></span>
+          </div>
+        </div>
+      </div>
+    }
+  }
+</div>

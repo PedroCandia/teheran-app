@@ -1,0 +1,153 @@
+.sec4_left {
+    height: 100%;
+}
+
+.sec4_left, .sec4_right {
+    width: 50%;
+}
+
+.bunya_wrap {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bunya {
+    position: relative;
+    height: 20%;
+}
+
+.bunya_1>.bunya_tit, .bunya_2>.bunya_tit>span, .bunya_3>.bunya_tit>span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -150px;
+    font-weight: 600;
+    font-size: 42px;
+    text-align: left;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.bunya_line {
+    display: none;
+    position: absolute;
+    height: 1px;
+    width: 70%;
+    right: 30%;
+    bottom: -2px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    background-color: rgb(255 255 255 / 40%);
+}
+
+.bunya_2>.bunya_tit, .bunya_3>.bunya_tit {
+    position: relative;
+    height: 100%;
+}
+
+.bunya_2>a, .bunya_3>a {
+    display: block;
+}
+.bunya_tit {
+    font-size: 42px;
+}
+
+.sec4_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(31, 28, 25, 60%);
+    opacity: 1;
+    /* padding-right: 66px; */
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bunya_btnwrap {
+    height: 16.6%;
+    border-bottom: 1px solid rgb(255 255 255 / 40%);
+}
+
+.bunya_btnwrap>.bunya_btn {
+    position: relative;
+    float: left;
+    display: block;
+    width: 33.3%;
+    height: 100%;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sec4_pc .bunya_txt {
+    margin-top: -11px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.bunya_btnwrap>.bunya_btn:nth-child(2), .bunya_btnwrap>.bunya_btn:nth-child(3), .bunya_btnwrap>.bunya_btn:nth-child(4) {
+    border-left: 1px solid rgb(255 255 255 / 40%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bunya_btnwrap>.bunya_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.bunya_btn:hover{
+    background-color: rgb(114, 78, 48) !important;
+
+    .bunya_txt {
+        margin-top: -12.5px !important;
+        font-size: 25px !important;
+        transition: font-size 0.5s ease;
+    }
+}
+
+.sec4_right:hover {
+    background-color: rgba(89, 69, 51, 0.8) !important;
+}
+
+.hovertitle:hover {
+    font-size: 44px !important;
+}
+
+.sec4_pc .bunya_1 .bunya_tit:hover ~ .sec4_right {
+    background-color: rgba(89, 69, 51, 0.8) !important;
+}
+
+.bunya_line:hover {
+    right: 0px !important;
+}
+
+.bunya_arrow {
+    padding-left: 25px;
+    padding-bottom: 5px;
+}

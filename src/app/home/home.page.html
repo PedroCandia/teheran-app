@@ -1,13 +1,22 @@
 <ion-menu menuId="first-menu" contentId="main-content" side="end">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-content class="ion-padding">
+    <div id="close_icon_menu">
+      <ion-menu-toggle>
+        <ion-icon name="close-outline" id="close_menu"></ion-icon>
+      </ion-menu-toggle>
+    </div>
+
+    <app-menu></app-menu>
+  </ion-content>
 </ion-menu>
 
 <div id="content">
+  <label class="dt_menu_mobile" (click)="openEndMenu()">
+    <span></span>
+    <span style="width: 18px; margin-left: 6px;"></span>
+    <span></span>
+  </label>
+  
   <header id="main-content">
     <div id="toolbar">
         <div id="desktop-menu">
@@ -42,69 +51,30 @@
   <div id="full-page">
     <div id="section0">
       <div id="fp-tableCell">
-        <div class="main_ment">
-          <span style="padding: 1rem 0rem;">
-            맞게 찾아오셨습니다.
-          </span>
-          <span>
-            여기가 바로 그 <span style="font-weight: 600;">테헤란</span>입니다.
-          </span>
-        </div>
-  
-        <video autoplay muted playsinline loop data-keepplaying data-object-fit="cover" data-wf-ignore="true" style="width:100%;opacity: 0.3;" class="video1">
-          <source src="../../assets/video/main_mov.mp4" type="video/mp4" data-wf-ignore="true">
-        </video>
-  
-        <div class="arrow">
-          <span class="arrow_span"></span>
-          <span class="arrow_txt">
-            SCROLL
-          </span>
-        </div>
+        <app-section0 style="width: 100%;"></app-section0>
       </div>
     </div>
 
     <div id="section1">
       <div class="fp-tableCell">
-        <a href="https://www.thr-law.co.kr/expert" class="sec2_more">
-          <span class="sec2_more_arrow"></span>
-          <span class="lorean more">MORE</span>
-        </a>
-
-        <span class="professional">Pr<span class="professional2">ofession</span>al.</span>
-
-        <div class="swiper-container">
-          @for (professional of professionals; track professional) {
-            @if(professional.show) {
-              <div class="swiper-wrapper" [@fadeInOut]="$index === currentIndex">
-                <img src="../../assets/img/{{professional.src}}" alt="{{professional.src}}" class="pro_bg">
-                <div class="profile">
-                  <div class="main_ment2">
-                    {{professional.msg1}}<div style="padding: 0.5rem 0rem;"></div>{{professional.msg2}} <span style="font-weight: 600;">{{professional.bold2}}</span>
-                  </div>
-                  <div class="pro_up">
-                    <img class="mark_img {{professional.mark}}" src="../../assets/img/{{professional.mark}}" alt="{{professional.mark}}">
-                    <img class="mark_img {{professional.mark2}}" src="../../assets/img/{{professional.mark2}}" alt="{{professional.mark2}}">
-                    <span class="pro_up_span">{{professional.msg3}} <span style="font-weight: 600;">{{professional.bold3}}</span></span>
-                  </div>
-                </div>
-              </div>
-            }
-          }
-        </div>
+        <app-section1 [currentIndex]="currentIndex"></app-section1>
       </div>
     </div>
 
     <div id="section2">
-
+      <div class="fp-tableCell-middle">
+        <app-section2></app-section2>
+      </div>
     </div>
 
     <div id="section3">
-      
+      <!-- <div class="fp-tableCell" style="height: 100%;"> -->
+        <app-section3 class="fp-tableCell"></app-section3>
+      <!-- </div> -->
     </div>
     
     <div id="section4">
-      
+      <app-section4 class="fp-tableCell" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;"></app-section4>
     </div>
 
     <div id="section5">
